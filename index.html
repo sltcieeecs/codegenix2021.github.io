@@ -18,15 +18,55 @@
     <script src="js/html5element.js"></script>
 <![endif]-->
  <style>
-   .goBlue{
+	body{
+		scroll-behavior: smooth!important;
+	}
+   	.goBlue{
      color: blue;
-   }
-   .goGreen{
+   	}
+   	.goGreen{
      color: forestgreen;
-   }
-   .goRed{
+   	}
+   	.goRed{
      color: crimson;
-   }
+   	}
+   	.scroll-down{
+	   text-align: center;
+	   width: 100%;
+	   position: absolute;
+	   top: 5%;
+	   left: 0;
+	   color: black!important;
+	   text-transform: uppercase;
+   	}
+   	.scroll-down a{
+		behavior: 'smooth'
+   	}
+   	.scroll-down .fa{
+	   margin: 0;
+	   padding: 0;
+	   font-size: 50px;
+	   color: black!important;
+   	}
+   	.scroll-down h3{
+		font-size: 2rem;
+   	}
+   	.fade-down
+	{
+		-webkit-animation: fade-down 1.5s infinite linear;
+		animation: fade-down 1.5s infinite linear;
+	}
+	@media (max-width: 767.98px) {
+		.scroll-down h3{
+			display: none;
+		}
+		.scroll-down{
+			top: 1%;
+		}
+		.scroll-down .fa{
+			font-size: 20px;
+		}
+	}
  </style>
 </head>
 <body>
@@ -35,6 +75,12 @@
       <source src="img/WhatsApp Video 2021-05-04 at 21.02.07.mp4" type="video/mp4">
       Your browser does not support HTML5 video.
     </video>
+	<div class="scroll-down">
+		<a href="#experience">
+			<h3>Scroll Down</h3>
+			<i class="fa fa-angle-double-down fade-down" aria-hidden="true"></i>
+		</a>
+	</div>
   </div>
 
 	<!--Header_section-->
@@ -352,9 +398,9 @@ end Service-->
 						<div class="col-sm-6 col-6 news-item right">
 							<div class="news-content" style="padding-left: 20px;">
 								<h2 class="news-title">Road to CodeMania’21</h2>
-								<span>A webinar series on “Python Fundamentals & Algorithmic Programming”.</span>
-								<p>This webinar series includes four informative webinars on Python programming and a project that evaluates the participants on the knowledge they grasped through
-									this webinar series. Any island-wide individual enthusiastic in Python can assist and grab this valuable opportunity to enhance their programming skills.</p>
+								<span>A workshop series on “Python Fundamentals & Algorithmic Programming”.</span>
+								<p>This workshop series includes four informative workshops on Python programming and a project that evaluates the participants on the knowledge they grasped through
+									this workshop series. Any island-wide individual enthusiastic in Python can assist and grab this valuable opportunity to enhance their programming skills.</p>
 								<a class="read-more" href="#" hidden target="_blank">Read More</a>
 							</div>
 						</div>
