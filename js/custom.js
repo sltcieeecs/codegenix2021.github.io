@@ -1,141 +1,140 @@
-/*
-Author URI: http://webthemez.com/
-Note: 
-Licence under Creative Commons Attribution 3.0 
-Do not remove the back-link in this web template 
--------------------------------------------------------*/
-
-$(window).load(function() {
-    jQuery('#all').click();
-    return false;
-});
-
-$(document).ready(function() {
-	$('.carousel').carousel();
-    $('#header_wrapper').scrollToFixed();
-    $('.res-nav_click').click(function() {
-        $('.main-nav').slideToggle();
-        return false
-
-    });
-	
-    function resizeText() {
-        var preferredWidth = 767;
-        var displayWidth = window.innerWidth;
-        var percentage = displayWidth / preferredWidth;
-        var fontsizetitle = 25;
-        var newFontSizeTitle = Math.floor(fontsizetitle * percentage);
-        $(".divclass").css("font-size", newFontSizeTitle)
-    }
-    if ($('#main-nav ul li:first-child').hasClass('active')) {
-        $('#main-nav').css('background', 'none');
-    }
-    $('#mainNav').onePageNav({
-        currentClass: 'active',
-        changeHash: false,
-        scrollSpeed: 950,
-        scrollThreshold: 0.2,
-        filter: '',
-        easing: 'swing',
-        begin: function() {
-        },
-        end: function() {
-            if (!$('#main-nav ul li:first-child').hasClass('active')) {
-                $('.header').addClass('addBg');
-            } else {
-                $('.header').removeClass('addBg');
-            }
-
-        },
-        scrollChange: function($currentListItem) {
-            if (!$('#main-nav ul li:first-child').hasClass('active')) {
-                $('.header').addClass('addBg');
-            } else {
-                $('.header').removeClass('addBg');
-            }
+// Format SatSchedule
+class scheduleEvent {
+    constructor(title, start, end, track) {
+        this.title = title;
+        this.startTime = start;
+        
+        if (track == undefined){
+          this.end = null
+          this.track = end;
         }
-    });
-
-    var container = $('#portfolio_wrapper');
-
-
-    container.isotope({
-        animationEngine: 'best-available',
-        animationOptions: {
-            duration: 200,
-            queue: false
-        },
-        layoutMode: 'fitRows'
-    });
-
-    $('#filters a').click(function() {
-        $('#filters a').removeClass('active');
-        $(this).addClass('active');
-        var selector = $(this).attr('data-filter');
-        container.isotope({
-            filter: selector
-        });
-        setProjects();
-        return false;
-    });
-
-    function splitColumns() {
-        var winWidth = $(window).width(),
-            columnNumb = 1;
-
-
-        if (winWidth > 1024) {
-            columnNumb = 4;
-        } else if (winWidth > 900) {
-            columnNumb = 2;
-        } else if (winWidth > 479) {
-            columnNumb = 2;
-        } else if (winWidth < 479) {
-            columnNumb = 1;
+        else{
+          this.endTime = end;
+          this.track = track;
         }
-
-        return columnNumb;
-    }
-	
-    function setColumns() {
-        var winWidth = $(window).width(),
-            columnNumb = splitColumns(),
-            postWidth = Math.floor(winWidth / columnNumb);
-
-        container.find('.portfolio-item').each(function() {
-            $(this).css({
-                width: postWidth + 'px'
-            });
-        });
+        
     }
 
-    function setProjects() {
-        setColumns();
-        container.isotope('reLayout');
+}
+
+var saturday = [];
+var sunday = [];
+
+// track = {main, ws} where ws is workshop
+saturday.push(new scheduleEvent("Check-In Opens", "10:00", "main"));
+saturday.push(new scheduleEvent("Hacking Begins", "12:00", "main"));
+saturday.push(new scheduleEvent("Opening Ceremony", "11:00", "main"));
+saturday.push(new scheduleEvent("Introduction to Electronics", "12:15", "13:15", "ws"));
+saturday.push(new scheduleEvent("LUNCH", "13:00", "main"));
+saturday.push(new scheduleEvent("Coding Challenge by BlackRock", "13:30", "14:30", "ws"));
+saturday.push(new scheduleEvent("Entreprenuership workshop by Edinburgh Innovations", "15:00", "16:00", "ws"));
+saturday.push(new scheduleEvent("Workshop by Nexmo", "17:00", "18:00", "ws"));
+saturday.push(new scheduleEvent("Dinner", "19:00", "main"));
+saturday.push(new scheduleEvent("Werewolf by MLH (Social)", "20:00", "21:00", "ws"));
+saturday.push(new scheduleEvent("Sleep Drop-In Begins", "21:00", "main"));
+sunday.push(new scheduleEvent("Pizza!!", "00:00", "main"));
+sunday.push(new scheduleEvent("Hacking Ends", "12:00", "main"));
+sunday.push(new scheduleEvent("Breakfast", "08:00", "main"));
+sunday.push(new scheduleEvent("Lunch", "12:00", "main"));
+sunday.push(new scheduleEvent("Judging Commences", "13:15", "14:30", "main"));
+sunday.push(new scheduleEvent("Closing Ceremony", "15:00", "16:00", "main"));
+sunday.push(new scheduleEvent("Venue closed", "17:00", "main"));
+// sunday.push(new scheduleEvent("No workshops today", "00:00", "17:00", "ws"));
+
+saturday.sort((a,b) => (a.startTime >= b.startTime) ? 1: -1);
+sunday.sort((a,b) => (a.startTime >= b.startTime) ? 1 : -1 );
+
+var str = '<tbody>';
+str +=  '<tr><th></th><th>Main track</th><th></th><th>Workshops</th></tr>';
+saturday.forEach(function(ev, index){
+  if (index ==0  || saturday[index-1].startTime != ev.startTime){     
+    str += '<tr>';
+    if (ev.track == 'ws'){
+
+        str += '<th></th>';
+        str += '<td></td>';
     }
 
-    container.imagesLoaded(function() {
-        setColumns();
-    });
+  str += '<th>';
 
+  str += ev.startTime 
+  if (ev.endTime){
+    str+='<br />|<br />' + ev.endTime;
+  }
+  str += '</th>';
+  str += '<td>';
+  str += ev.title + '';
+  str += '</td>';
+  
+  if (ev.track == 'main'){
+      if(index != saturday.length-1 && ev.startTime == saturday[index+1].startTime){
+        str += '<th>';
+        str+=saturday[index+1].startTime
+        if(saturday[index+1].endTime){
+        str +=  '<br />|<br />' + saturday[index+1].endTime;
+      }
+    
+  str += '</th>';
+  str += '<td>' + saturday[index+1].title+ '</td>';
+    }
+  else{
+  str +='<th></th>';
+  str += '<td></td>';
+  }}
+  
+  str += '</tr>';
+  
+  }
 
-    $(window).bind('resize', function() {
-        setProjects();
-    });
-
-   $(".fancybox").fancybox();
 });
+str += '</tbody>';
+window.document.getElementById("saturdayContainer").innerHTML = str;
 
-wow = new WOW({
-    animateClass: 'animated',
-    offset: 100
+var str = '<tbody>';
+str +=  '<tr><th></th><th>Main track</th><th></th><th>Workshops</th></tr>';
+sunday.forEach(function(ev, index){
+  if (index ==0  || (sunday[index-1].startTime != ev.startTime || sunday[index-1].track == ev.track) ){     
+    str += '<tr>';
+    if (ev.track == 'ws'){
+
+        str += '<th></th>';
+        str += '<td></td>';
+    }
+    
+    
+
+  str += '<th>';
+
+  str += ev.startTime 
+  if (ev.endTime){
+    str+='<br />|<br />' + ev.endTime;
+  }
+  str += '</th>';
+  str += '<td>';
+  str += ev.title + '';
+  str += '</td>';
+  
+  if (ev.track == 'main'){
+    if (index != sunday.length-1 && ev.startTime == sunday[index+1].startTime && ev.track != sunday[index+1].track){
+        str += '<th>';
+        str+=sunday[index+1].startTime
+        if(sunday[index+1].endTime){
+        str +=  '<br />|<br />' + sunday[index+1].endTime;
+      }
+    
+  str += '</th>';
+  str += '<td>' + sunday[index+1].title+ '</td>';
+    
+  }
+  else{
+  str +='<th></th>';
+  str += '<td></td>';
+  }}
+  
+  str += '</tr>';
+  
+  }
+
 });
-wow.init();
-document.getElementById('').onclick = function() {
-    var section = document.createElement('section');
-    section.className = 'wow fadeInDown';
-    section.className = 'wow shake';
-    section.className = 'wow zoomIn';
-    section.className = 'wow lightSpeedIn';
-    this.parentNode.insertBefore(section, this);
-};
+str += '</tbody>';
+window.document.getElementById("sundayContainer").innerHTML = str;

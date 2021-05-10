@@ -1,633 +1,298 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, maximum-scale=1">
-<title>CodeGenix'21 | IEEE CS Chapter of SLTC</title>
-<link rel="icon" href="img/Untitled-1.png" type="image/png">
-<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" href="js/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
-<link href="css/style.css" rel="stylesheet" type="text/css">
-<link href="css/font-awesome.css" rel="stylesheet" type="text/css">
-<link href="css/animate.css" rel="stylesheet" type="text/css">
-<link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+<!DOCTYPE html>
+<html lang="en">
 
-<!--[if lt IE 9]>
-    <script src="js/respond-1.1.0.min.js"></script>
-    <script src="js/html5shiv.js"></script>
-    <script src="js/html5element.js"></script>
-<![endif]-->
- <style>
-	html{
-		scroll-behavior: smooth!important;
-	}
-   	.goBlue{
-     color: blue;
-   	}
-   	.goGreen{
-     color: forestgreen;
-   	}
-   	.goRed{
-     color: crimson;
-   	}
-   	.scroll-down{
-	   text-align: center;
-	   width: 100%;
-	   position: absolute;
-	   top: 5%;
-	   left: 0;
-	   color: black!important;
-	   text-transform: uppercase;
-   	}
-   	.scroll-down a{
-		behavior: 'smooth'
-   	}
-   	.scroll-down .fa{
-	   margin: 0;
-	   padding: 0;
-	   font-size: 50px;
-	   color: black!important;
-   	}
-   	.scroll-down h3{
-		font-size: 2rem;
-   	}
-   	.fade-down
-	{
-		-webkit-animation: fade-down 1.5s infinite linear;
-		animation: fade-down 1.5s infinite linear;
-	}
-	@media (max-width: 767.98px) {
-		.scroll-down h3{
-			display: none;
-		}
-		.scroll-down{
-			top: 1%;
-		}
-		.scroll-down .fa{
-			font-size: 20px;
-		}
-	}
-	table tr td{
-		color: black;
-		padding: 10px 12px;
-		text-shadow: 0px 0px 4px rgb(23, 220, 184);
-	}
-	.read-more{
-		margin-top: 10px;
-		background-color: #17dcb8;
-		color: black !important;
-		padding: 8px 10px !important;
-		border-radius: 50px;
-		border: 2px solid #fff;
-		transition: .4s;
-	}
-	.read-more:hover{
-		background-color: #1a83b8;
-		color: white !important;
-		transition: .4s;
-	}
-	.read-more a {
-		color: black;
-	}
-</style>
-</head>
-<body>
-  <div id="carousel" style="max-height: 100vh; overflow: hidden;">
-    <video autoplay muted loop id="myVideo" style="width: 100%;">
-      <source src="img/WhatsApp Video 2021-05-04 at 21.02.07.mp4" type="video/mp4">
-      Your browser does not support HTML5 video.
-    </video>
-	<div class="scroll-down">
-		<a href="#header_wrapper">
-			<h3>Scroll Down</h3>
-			<i class="fa fa-angle-double-down fade-down" aria-hidden="true"></i>
-		</a>
-	</div>
-  </div>
+	<head>
 
-	<!--Header_section-->
-	<header id="header_wrapper">
-	<div class="container">
-		<div class="header_box">
-		<!--<div class="logo"><a href="#">Resume</a></div>-->
-		<nav class="navbar navbar-inverse" role="navigation">
-		<div class="navbar-header">
-			<button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="description" content="">
+		<meta name="author" content="">
+
+		<title>CodeGenix '21</title>
+
+		<!-- Bootstrap core CSS -->
+		<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+		<!-- Custom fonts for this template -->
+		<link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+		<!-- Custom styles for this template -->
+		<link href="css/grayscale.min.css" rel="stylesheet">
+		<link href="css/custom.css" rel="stylesheet">
+		<!-- Favicon for CreatED 2020 -->
+		<link rel="icon" href="img/favicon_io/favicon.png" type="image/png">
+	</head>
+
+	<body id="page-top">
+
+		<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav" hidden>
+			<div id="navbar-container" class="container">
+				<div id="navbar-top-menu">
+					<div class="d-flex align-items-center justify-content-between">
+						<a class="navbar-brand js-scroll-trigger" href="index.html">
+							<div class="title-icon"></div>
+						</a>
+						<button class="navbar-toggler nexa" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" hidden>
+							Menu
+							<i class="fas fa-bars"></i>
+						</button>
+					</div>
+				</div>
+				<div class="collapse navbar-collapse" id="navbarResponsive">
+					<ul id="navbar-buttons" class="navbar-nav ml-auto" hidden>
+						<li class="nav-item">
+							<a class="nav-link js-scroll-trigger nexa" href="https://my.mlh.io/oauth/authorize?client_id=cef9c1e6ba6e0e53dca74d35208a5b5a1f8aa2b8b9805724ef6657d15ce5a5ec&redirect_uri=http%3A%2F%2Fapply.createdhack.com%2F&response_type=token">Apply</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link js-scroll-trigger nexa" href="faqs.html">FAQs</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link js-scroll-trigger nexa" href="sponsors.html">Sponsors</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link js-scroll-trigger nexa" href="workshops.html">Workshops</a>
+						</li>
+						<li class="nav-item" id="team">
+							<a class="nav-link js-scroll-trigger nexa" href="teams.html">Team</a>
+						</li>
+					</ul>
+				</div>
 			</div>
-			<div id="main-nav" class="collapse navbar-collapse navStyle">
-				<ul class="nav navbar-nav" id="mainNav">
-				<li class="active"><a href="#carousel" class="scroll-link">Home</a></li>
-				<!-- <li><a href="#aboutUs" class="scroll-link">About Me</a></li>
-				<li><a href="#service" class="scroll-link">My Skills</a></li>
-				<li><a href="#Portfolio" class="scroll-link">Portfolio</a></li>  -->
-				<li><a href="#experience" class="scroll-link">Timeline</a></li>
-				<li style="margin: 0px;"><a href="#contact" class="scroll-link">Contact</a></li>
-				</ul>
-		</div>
 		</nav>
-		</div>
-	</div>
-	</header>
-<!--Header_section
-
-<section id="aboutUs">
-<div class="inner_wrapper about-us aboutUs-container fadeInLeft animated wow">
-  <div class="container">
-    <h2>About Me</h2>
-	<h6>A persone who loves Nature and It's creations</h6>
-    <div class="inner_section">
- <div class="row">
-      <div class="col-md-6"> <img class="img-responsive" src="img/about1.png" align=""> </div>
-      <div class="col-md-6">
-        <h3>My Passion</h3>
-        <p>Lorem ipsum dolor sit amet, quo meis voluptaria, erant bonorum albucius et per, ei placerat eu, te eos porro veniam. An everti maiorum detracto mea. Eu eos dicam voluptaria, erant bonorum albucius et per, ei sapientem accommodare est. Saepe dolorum constituam ei vel. Te sit malorum ceteros repudiandae, ne tritani adipisci vis.</p>
-
-        <p>Lorem ipsum dolor sit amet, voluptaria, erant bonorum albucius et per, ei meis audire placerat eu, te eos porro veniam. An everti maiorum detracto mea. Lorem ipsum dolor sit amet, consectetur Morbi sagittis, sem quisci ipsum gravida tortor orci ipsum gravida tortor.
-									</p>
-
-									<ul class="about-us-list">
-										<li class="points">Consectetur Morbi sagittis, sem quisci ipsum gravida tortor</li>
-                                        <li class="points">Sagittis, sem quis lacinia faucibus, orci ipsum gravida </li>
-										<li class="points">Ipsum dolor sit amet, consectetur Morbi sagittis, sem quisci</li>
-									</ul>
-
-      </div>
-    </div>
-	     </div>
-  </div>
-  </div>
-</section>
-end About us-->
-
-
-<!--Service
-<section  id="service">
-  <div class="container">
-    <h2>My Skills</h2>
-	<h6>Lorem ipsum dolor sit amet, consectetur Morbi sagittis, sem quisci ipsum</h6>
-    <div class="service_wrapper">
-      <div class="row">
-        <div class="col-md-3">
-		<div class="service_icon delay-03s animated wow  zoomIn"> <span><i class="fa fa-tree"></i></span> </div>
-          <div class="service_block">
-
-            <h3 class="animated fadeInUp wow">Photography</h3>
-            <p class="animated fadeInDown wow">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-          </div>
-        </div>
-        <div class="col-md-3">
-		<div class="service_icon icon2  delay-03s animated wow zoomIn"> <span><i class="fa fa-crosshairs"></i></span> </div>
-		<div class="service_block">
-            <h3 class="animated fadeInUp wow">Editing Skills</h3>
-            <p class="animated fadeInDown wow">Lorem Ipsum is simply dummy text of the printing and typesetting industry.  </p>
-          </div>
-        </div>
-        <div class="col-md-3">
-		<div class="service_icon icon3  delay-03s animated wow zoomIn"> <span><i class="fa fa-building-o "></i></span> </div>
-          <div class="service_block">
-
-            <h3 class="animated fadeInUp wow">Lighting</h3>
-            <p class="animated fadeInDown wow">Lorem Ipsum is simply dummy text of the printing and typesetting industry.  </p>
-          </div>
-        </div>
-		  <div class="col-md-3">
-		<div class="service_icon icon3  delay-03s animated wow zoomIn"> <span><i class="fa fa-twitter"></i></span> </div>
-          <div class="service_block">
-
-            <h3 class="animated fadeInUp wow">Dimensions</h3>
-            <p class="animated fadeInDown wow">Lorem Ipsum is simply dummy text of the printing and typesetting industry.  </p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-end Service-->
-
-<!-- Portfolio
-<section id="Portfolio" class="content">
-
-
-  <div class="container portfolio_title">
-
-
-    <div class="section-title">
-      <h2>Portfolio</h2>
-	<h6>Lorem ipsum dolor sit amet, consectetur Morbi sagittis, sem quisci ipsum</h6>
-
-    </div>
-
-
-  </div>
-
-
-  <div class="portfolio-top"></div>
-
-
-  <div class="portfolio">
-
-    <div id="filters" class="sixteen columns">
-      <ul class="clearfix">
-        <li><a id="all" href="#" data-filter="*" class="active">
-          <h5>All</h5>
-          </a></li>
-        <li><a class="" href="#" data-filter=".nature">
-          <h5>People</h5>
-          </a></li>
-        <li><a class="" href="#" data-filter=".wildlife">
-          <h5>Animal</h5>
-          </a></li>
-        <li><a class="" href="#" data-filter=".citylife">
-          <h5>Nature</h5>
-          </a></li>
-        <li><a class="" href="#" data-filter=".animals">
-          <h5>Sea Scape</h5>
-          </a></li>
-      </ul>
-    </div>
-
-
-
-    <div class="isotope fadeInLeft animated wow grid" style="position: relative; overflow: hidden; height: 480px;" id="portfolio_wrapper">
-
-      <figure style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four   animals isotope-item effect-oscar">
-
-        <div class="portfolio_img">
-		<img src="img/portfolio_pic1.jpg"  alt="Portfolio 1"> </div>
-			<figcaption>
-				<div>
-				  <a href="img/portfolio_pic1.jpg" class="fancybox">
-					<h2>Warm <span>Oscar</span></h2>
-							<p>Oscar is a decent man. He used to clean porches with pleasure.</p>
-				  </a>
-				</div>
-			</figcaption>
-        </figure>
-
-
-
-      <figure style="position: absolute; left: 0px; top: 0px; transform: translate3d(337px, 0px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four  wildlife isotope-item effect-oscar">
-        <div class="portfolio_img"> <img src="img/portfolio_pic2.jpg" alt="Portfolio 1"> </div>
-        	<figcaption>
-				<div>
-				  <a href="img/portfolio_pic2.jpg" class="fancybox">
-					<h2>Warm <span>Oscar</span></h2>
-							<p>Oscar is a decent man. He used to clean porches with pleasure.</p>
-				  </a>
-				</div>
-			</figcaption>
-        </figure>
-
-
-
-      <figure style="position: absolute; left: 0px; top: 0px; transform: translate3d(674px, 0px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four  wildlife  isotope-item effect-oscar">
-        <div class="portfolio_img"> <img src="img/portfolio_pic3.jpg" alt="Portfolio 1"> </div>
-       <figcaption>
-				<div>
-				  <a href="img/portfolio_pic3.jpg" class="fancybox">
-					<h2>Warm <span>Oscar</span></h2>
-							<p>Oscar is a decent man. He used to clean porches with pleasure.</p>
-				  </a>
-				</div>
-			</figcaption>
-        </figure>
-
-
-
-      <figure style="position: absolute; left: 0px; top: 0px; transform: translate3d(1011px, 0px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four  citylife  nature web isotope-item effect-oscar">
-        <div class="portfolio_img"> <img src="img/portfolio_pic4.jpg" alt="Portfolio 1"> </div>
-         <figcaption>
-				<div>
-				  <a href="img/portfolio_pic4.jpg" class="fancybox">
-					<h2>Warm <span>Oscar</span></h2>
-							<p>Oscar is a decent man. He used to clean porches with pleasure.</p>
-				  </a>
-				</div>
-			</figcaption>
-      </figure>
-
-
-
-      <figure style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 240px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four  wildlife isotope-item effect-oscar">
-        <div class="portfolio_img"> <img src="img/portfolio_pic5.jpg" alt="Portfolio 1"> </div>
-       <figcaption>
-				<div>
-				  <a href="img/portfolio_pic5.jpg" class="fancybox">
-					<h2>Warm <span>Oscar</span></h2>
-							<p>Oscar is a decent man. He used to clean porches with pleasure.</p>
-				  </a>
-				</div>
-			</figcaption>
-      </figure>
-
-
-
-      <figure style="position: absolute; left: 0px; top: 0px; transform: translate3d(337px, 240px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four  web isotope-item effect-oscar">
-        <div class="portfolio_img"> <img src="img/portfolio_pic6.jpg" alt="Portfolio 1"> </div>
-       <figcaption>
-				<div>
-				  <a href="img/portfolio_pic6.jpg" class="fancybox">
-					<h2>Warm <span>Oscar</span></h2>
-							<p>Oscar is a decent man. He used to clean porches with pleasure.</p>
-				  </a>
-				</div>
-			</figcaption>
-      </figure>
-
-
-
-      <figure style="position: absolute; left: 0px; top: 0px; transform: translate3d(674px, 240px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four  wildlife web isotope-item effect-oscar">
-        <div class="portfolio_img"> <img src="img/portfolio_pic7.jpg" alt="Portfolio 1"> </div>
-       <figcaption>
-				<div>
-				  <a href="img/portfolio_pic7.jpg" class="fancybox">
-					<h2>Warm <span>Oscar</span></h2>
-							<p>Oscar is a decent man. He used to clean porches with pleasure.</p>
-				  </a>
-				</div>
-			</figcaption>
-       </figure>
-
-
-
-      <figure style="position: absolute; left: 0px; top: 0px; transform: translate3d(1011px, 240px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four   citylife isotope-item effect-oscar">
-        <div class="portfolio_img"> <img src="img/portfolio_pic8.jpg" alt="Portfolio 1"> </div>
-      <figcaption>
-				<div>
-				  <a href="img/portfolio_pic8.jpg" class="fancybox">
-					<h2>Warm <span>Oscar</span></h2>
-							<p>Oscar is a decent man. He used to clean porches with pleasure.</p>
-				  </a>
-				</div>
-			</figcaption>
-        </figure>
-
-
-    </div>
-
-
-  </div>
-
-
-  <div class="portfolio_btm"></div>
-
-
-  <div id="project_container">
-    <div class="clear"></div>
-    <div id="project_data"></div>
-  </div>
-
-
-</section>
- /Portfolio  -->
-<!--Awards -->
-	<section id="experience">
-		<div class="container" style="margin-top: 30px;">
-			<section id="news" class="white-bg padding-top-bottom">
-				<div class="section-title" >
-					<!-- <h2>CodeGenix '21</h2> -->
-					<div style="text-align: center;">
-						<img src="img/CodegeniX logo1.png" alt="" style="margin-bottom: 20px;">
-					</div>
-					<!-- <h6 style="line-height: 1.5;">The IEEE Computer Society Student Branch Chapter of SLTC proudly present the Month of CodeGeniX 2021, for the first time in the history of SLTC, introducing a 
-						series of continuous programs. The month consists of three workshop series, and a competitive programming competition. All of these programs are individually linked to one another and with the intension 
-						of providing the computing & technology enthusiastic individuals the knowledge to step towards the IT industry and how to survive in the industry. All the projects are covered by well known 
-						and highly educated panel and judges in order of the success of this event.
-					</h6> -->
-					<div class="row" class="section-title">
-						<table>
-							<tr>
-								<td>
-									<b>Who is it for:</b>
-								</td>
-								<td>
-									Undergraduates from all the universities in Sri Lanka & school students
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<b>When is it:</b>
-								</td>
-								<td>
-									15th May to 12th June
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<b>Where will it take place:</b>
-								</td>
-								<td>
-									Zoom platform & Facebook Live
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<b>I haven't any experience:</b>
-
-								</td>
-								<td>
-									These workshops are useful for not only individuals who have the knowledge of Computing and IT but also individuals who are stepping towards the field of IT and who are interested in learning the field of IT.
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<b>Will we win anything:</b>
-								</td>
-								<td>
-									You will be awarded with a valuable certification.
-								</td>
-							</tr>
-						</table>
-					</div>
-				</div>
-				<div class="container">
-					<div class="timeline">
-						<div class="date-title">
-							<span>2021 May</span>
-						</div>
-						<div class="row">
-
-						<div class="col-sm-6 col-6 news-item">
-							<div class="news-content">
-								<div class="date goRed">
-									<p>May 15</p>
-								</div>
-								<h2 class="news-title">Panel Discussion</h2>
-								<span>2021 May 15</span>
-								<p>A panel discussion on “How to be successful in the IT Industry”.
-								All island IT enthusiasts are able to partake and explicit their confusions on building their carrier in the IT Industry and how to make it a success together with perspicacious panelists within a day.
-								</p>
-								<button class="read-more">
-									<a class="" href="https://forms.gle/RpqFhUkQfBHXSALc6" target="_blank">Register Now</a>
-								</button>
-							</div>
-						</div>
-
-						<div class="col-sm-6 col-6 news-item right">
-							<div class="news-content" style="padding-left: 20px;">
-								<h2 class="news-title">Road to CodeMania’21</h2>
-								<span><b>3rd week of May – 22nd & 23rd  -  workshop 01/02   -  4pm – 6pm<br>
-									4th week of May – 29th & 30th   -  workshop 03/04   -  4pm – 6pm</b></span>
-								<p>A workshop series on “Python Fundamentals & Algorithmic Programming”.This workshop series includes four informative workshops on Python programming and a project that evaluates the participants on the knowledge they grasped through
-									this workshop series. Any island-wide individual enthusiastic in Python can assist and grab this valuable opportunity to enhance their programming skills.</p>
-								<button class="read-more">
-									<a class="" href="https://forms.gle/A5eb9EhNLFqiKr2r7" target="_blank">Register Now</a>
-								</button>
-							</div>
-						</div>
-					</div>
-
-					<div class="row">
-						<div class="col-sm-6 col-6 news-item">
-							<div class="news-content">
-								<div class="date goBlue">
-									<p>May 22</p>
-								</div>
-								<h2 class="news-title">Workshop 01</h2>
-								<span>2021 May 22</span>
-								<p>⦿ Python Session 01 - Introduction to Python & an approach to programming in Python.</p>
-								<button class="read-more" hidden>
-									<a class="" href="#" target="_blank">Read More</a>
-								</button>
-							</div>
-						</div>
-
-						<div class="col-sm-6 col-6 news-item right">
-							<div class="news-content">
-								<div class="date goBlue">
-									<p>May 23</p>
-								</div>
-								<h2 class="news-title">Workshop 02</h2>
-								<span>2021 May 23</span>
-								<p>⦿ Python Session 02 - Basics of python & concepts</p>
-								<button class="read-more" hidden>
-									<a class="" href="#" target="_blank">Read More</a>
-								</button>
-							</div>
-						</div>
-					</div>
-
-					<div class="row">
-						<div class="col-sm-6 col-6 news-item">
-							<div class="news-content">
-								<div class="date goBlue">
-									<p>May 29</p>
-								</div>
-								<h2 class="news-title">Workshop 03</h2>
-								<span>2021 May 29</span>
-								<p>⦿ Python Session 03 - Control Flows & Loops, Conditional statements, etc.</p>
-								<button class="read-more" hidden>
-									<a class="" href="#" target="_blank">Read More</a>
-								</button>
-							</div>
-						</div>
-
-						<div class="col-sm-6 col-6 news-item right">
-							<div class="news-content">
-								<div class="date goBlue">
-									<p>May 30</p>
-								</div>
-								<h2 class="news-title">Workshop 04</h2>
-								<span>2021 May 30</span>
-								<p>⦿ Discussion of algorithm problems<br>
-								⦿ How to participate in competitions & skills required<br>
-								⦿ Coding Challenge to earn the Certification</p>
-								<button class="read-more" hidden>
-									<a class="" href="#" target="_blank">Read More</a>
-								</button>
-							</div>
-						</div>
-					</div>
-
-					<div class="date-title">
-						<span>2021 June</span>
-					</div>
-					<div class="row">
-						<div class="col-sm-6 col-6 news-item">
-							<div class="news-content">
-								<div class="date goGreen">
-									<p>Jun 05</p>
-								</div>
-								<h2 class="news-title">AdaGrad - Introduction to Machine Learning</h2>
-								<span>2021 June 05</span>
-								<p>This Workshop will help to develop awareness about Machine learning in the community and this is a great opportunity to accomplish the
-								Machine learning knowledge within the individuals around Sri Lanka who are interested in Machine learning.</p>
-								<button class="read-more">
-									<a class="" href="https://docs.google.com/forms/d/e/1FAIpQLSfPWi_YexUx3_UT5ujP1huZBBb_M119cF3z4_YzYSP1N-9TIA/viewform?usp=sf_link" target="_blank">Register Now</a>
-								</button>
-							</div>
-						</div>
-
-						<div class="col-sm-6 col-6 news-item right">
-							<div class="news-content">
-								<div class="date">
-									<p>Jun 12</p>
-								</div>
-								<h2 class="news-title">CodeMania V2.0</h2>
-								<span>2021 June 12</span>
-								<p>Online Hackathon<br>
-								This provides an online programming competition which gives the opportunity for coding to a given task by the competitors and only SLTC undergraduates can take part in this online programming competition.
-								</p>
-								<button class="read-more">
-									<a target="_blank" class="" href="https://codemaniav2.github.io/">Register Now!</a>
-								</dutton>
-								
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-	</div>
-	</section>
-	<!--/awards -->
-	<!--Footer-->
-	<footer class="footer_wrapper" id="contact">
-		<div class="container">
-			<section class="page_section contact" id="contact">
-				<div class="contact_section">
-					<h2>Contact Us</h2>
-					<h6>IEEE Computer Society Student Branch Chapter of SLTC</h6>
-				</div>
-				<div class="row" style="text-align: center;">
-					<div class="col-lg-12 wow fadeInLeft">
-						<div class="contact_info">
-							<div class="detail">
-								<h4>Connect with us</h4>
-								<div class="col-lg-12" style="text-align: center; font-size: 40px; padding: 10px;">
-									<span class="facebook animated bounceIn wow delay-01s" style="padding: 5px;"><a href="https://lnkd.in/gpeu2Xe" target="_blank"><i  class="fa fa-facebook-square"></i></a></span>
-									<span class="facebook animated bounceIn wow delay-02s" style="padding: 5px;"><a href="https://lnkd.in/gAgQFAv" target="_blank"><i class="fa fa-linkedin-square"></i></a></span>
-									<span class="pinterest animated bounceIn wow delay-03s" style="padding: 5px;"><a href="https://lnkd.in/gaYqJ4A" target="_blank"><i class="fa fa-instagram"></i></a></span>
-									<span class="twitter animated bounceIn wow delay-04s" style="padding: 5px;"><a href="www.twitter.com/sltcieeecs" target="_blank"><i class="fa fa-twitter-square"></i></a></span>
-									<span class="gplus animated bounceIn wow delay-05s" style="padding: 5px;"><a href="https://www.youtube.com/channel/UCrsJlEY4bydXLVdNn7SV4EA" target="_blank"><i class="fa fa-youtube-play"></i></a></span>
-								</div>
-							</div>
-							<div class="detail">
-								<h4>Email us</h4>
-								<p><a href="mailto:sltcieeecs@gmail.com" style="text-decoration: none;">sltcieeecs@gmail.com</a></p>
-							</div>
-							<div class="detail">
-								<h4>Contact us</h4>
-								<p><a href="tel:+94712528859" style="text-decoration: none;">+94 71 252 8859</a> (Vimukthi)
-									<br><a href="tel:+94712761321" style="text-decoration: none;">+94 71 276 1321</a> (Pasindu)</p>
-							</div>
-						</div>
-					</div>
-				</div>
+		
+		<div id="particles-js"></div>
+
+		<section class="text-center">
+		
+			<section>
+			
+			  <h1 class="sub-heading diagonal-text orange" style="padding: 6em 0 4em 0;"><img src="img/CodegeniX logo WHITE.png" alt="" style="height: auto; width: 55%;"></h1>
+			  
 			</section>
-		</div>
-	</footer>
+			
+			<section class="diagonal-section white-bg" style="opacity: 0.95!important;">
+			
+				<div class="mx-auto diagonal-section-content">
+					<div class="container">
+						<div class="border-box">
+							<div class="row justify-content-center no-gutters mb-5 mb-lg-0 workshop-item">
+								<div class="col-lg-6 workshop-item-image">
+									<img class="img-fluid" src="img/code1.jpg" alt="">
+								</div>
+								<div class="col-lg-6 workshop-item-textbox">
+									<div class="bg-black text-center h-100 project">
+										<div class="d-flex h-100">
+											<div class="project-text w-100 my-auto text-center text-lg-left">
+												<h4 class="sub-heading inline orange">Panel Discussion</h4>
+												<h5 style="color: #ffda94;">2021 May 15</h5>
+												<p class="mb-0 white nexa">A panel discussion on “How to be successful in the IT Industry”. All island IT enthusiasts are able to partake and explicit their confusions 
+													on building their carrier in the IT Industry and how to make it a success together with perspicacious panelists within a day. </p>
+												<div style="margin-top: 30px;">
+													<a style="margin: 0!important;" href="https://forms.gle/RpqFhUkQfBHXSALc6" class="btn btn-primary">Register Now</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="border-box">
+							<div class="row justify-content-center no-gutters mb-5 mb-lg-0 workshop-item">
+								<div class="col-lg-6 workshop-item-image">
+									<img class="img-fluid" src="img/code2.jpg" alt="">
+								</div>
+								<div class="col-lg-6 order-lg-first workshop-item-textbox">
+									<div class="bg-black text-center h-100 project">
+										<div class="d-flex h-100">
+											<div class="project-text w-100 my-auto text-center text-lg-right">
+												<h4 class="sub-heading inline orange nexa">Road to CodeMania’21</h4>
+												<h6 style="color: #ffda94;">3rd week of May – 22nd & 23rd - workshop 01/02 - 4pm – 6pm<br>
+													4th week of May – 29th & 30th - workshop 03/04 - 4pm – 6pm</h6>
+												<p class="mb-0 white nexa">A workshop series on “Python Fundamentals & Algorithmic Programming”.This workshop series includes four informative workshops on Python programming 
+													and a project that evaluates the participants on the knowledge they grasped through this workshop series. Any island-wide individual enthusiastic in Python can assist and 
+													grab this valuable opportunity to enhance their programming skills.</p>
+												<hr class="d-none d-lg-block mb-0 mr-0">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="border-box">
+							<div class="row justify-content-center no-gutters mb-5 mb-lg-0 workshop-item">
+								<div class="col-lg-6 workshop-item-image">
+									<img class="img-fluid" src="img/code3.jpg" alt="">
+								</div>
+								<div class="col-lg-6 workshop-item-textbox">
+									<div class="bg-black text-center h-100 project">
+										<div class="d-flex h-100">
+											<div class="project-text w-100 my-auto text-center text-lg-left">
+												<h4 class="sub-heading inline orange">Workshop 01</h4>
+												<h5 style="color: #ffda94;">2021 May 22</h5>
+												<p class="mb-0 white nexa">⦿ Python Session 01 - Introduction to Python & an approach to programming in Python.</p>
+												<hr class="d-none d-lg-block mb-0 ml-0">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="border-box">
+							<div class="row justify-content-center no-gutters workshop-item">
+								<div class="col-lg-6 workshop-item-image">
+									<img class="img-fluid" src="img/code4.jpg" alt="">
+								</div>
+								<div class="col-lg-6 order-lg-first workshop-item-textbox">
+									<div class="bg-black text-center h-100 project">
+										<div class="d-flex h-100">
+											<div class="project-text w-100 my-auto text-center text-lg-right">
+												<h4 class="sub-heading inline orange">Workshop 02</h4>
+												<h5 style="color: #ffda94;">2021 May 23</h5>
+												<p class="mb-0 white nexa">⦿ Python Session 02 - Basics of python & concepts</p>
+												<hr class="d-none d-lg-block mb-0 mr-0">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="border-box">
+							<div class="row justify-content-center no-gutters mb-5 mb-lg-0 workshop-item">
+								<div class="col-lg-6 workshop-item-image">
+									<img class="img-fluid" src="img/code5.jpg" alt="">
+								</div>
+								<div class="col-lg-6 workshop-item-textbox">
+									<div class="bg-black text-center h-100 project">
+										<div class="d-flex h-100">
+											<div class="project-text w-100 my-auto text-center text-lg-left">
+												<h4 class="sub-heading inline orange">Workshop 03</h4>
+												<h5 style="color: #ffda94;">2021 May 29</h5>
+												<p class="mb-0 white nexa">⦿ Python Session 03 - Control Flows & Loops, Conditional statements, etc.</p>
+												<hr class="d-none d-lg-block mb-0 ml-0">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="border-box">
+							<div class="row justify-content-center no-gutters workshop-item">
+								<div class="col-lg-6 workshop-item-image">
+									<img class="img-fluid" src="img/code6.jpeg" alt="">
+								</div>
+								<div class="col-lg-6 order-lg-first workshop-item-textbox">
+									<div class="bg-black text-center h-100 project">
+										<div class="d-flex h-100">
+											<div class="project-text w-100 my-auto text-center text-lg-right">
+												<h4 class="sub-heading inline orange">Workshop 04</h4>
+												<h5 style="color: #ffda94;">2021 May 30</h5>
+												<p class="mb-0 white nexa">⦿ Discussion of algorithm problems<br>
+													⦿ How to participate in competitions & skills required<br>
+													⦿ Coding Challenge to earn the Certification</p>
+												<hr class="d-none d-lg-block mb-0 mr-0">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="border-box">
+							<div class="row justify-content-center no-gutters mb-5 mb-lg-0 workshop-item">
+								<div class="col-lg-6 workshop-item-image">
+									<img class="img-fluid" src="img/code7.png" alt="">
+								</div>
+								<div class="col-lg-6 workshop-item-textbox">
+									<div class="bg-black text-center h-100 project">
+										<div class="d-flex h-100">
+											<div class="project-text w-100 my-auto text-center text-lg-left">
+												<h4 class="sub-heading inline orange">AdaGrad - Introduction to Machine Learning</h4>
+												<h5 style="color: #ffda94;">2021 June 05</h5>
+												<p class="mb-0 white nexa">This Workshop will help to develop awareness about Machine learning in the community and this is a great opportunity to accomplish the Machine 
+													learning knowledge within the individuals around Sri Lanka who are interested in Machine learning.</p>
+												<hr class="d-none d-lg-block mb-0 ml-0">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="border-box">
+							<div class="row justify-content-center no-gutters workshop-item">
+								<div class="col-lg-6 workshop-item-image">
+									<img class="img-fluid" src="img/code8.jpg" alt="">
+								</div>
+								<div class="col-lg-6 order-lg-first workshop-item-textbox">
+									<div class="bg-black text-center h-100 project">
+										<div class="d-flex h-100">
+											<div class="project-text w-100 my-auto text-center text-lg-right">
+												<h4 class="sub-heading inline orange">CodeMania V2.0</h4>
+												<h5 style="color: #ffda94;">2021 June 12</h5>
+												<p class="mb-0 white nexa">Online Hackathon<br>
+													This provides an online programming competition which gives the opportunity for coding to a given task by the competitors and only SLTC undergraduates can take part in this online programming competition. </p>
+												<hr class="d-none d-lg-block mb-0 mr-0">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</section>
+		
+			<section class="diagonal-section black-bg" style="height: 4em; opacity: 1;"></section>
+		
+			<section class="footer-section black-bg">
+			
+				<div style="padding-top: 0">
+					<div class="small text-center white">
+						<div class="social d-flex justify-content-center"></div>
+						<div class="white mb-4 nexa">
+							Copyright &copy; CodeGenix'21
+						</div>
+						<a href="https://lnkd.in/gpeu2Xe" class="mx-2 orange-hover">
+						  <i class="fab fa-facebook-f"></i>
+						</a>
+						<a href="https://www.youtube.com/channel/UCrsJlEY4bydXLVdNn7SV4EA" class="mx-2 orange-hover">
+						  <i class="fab fa-youtube"></i>
+						</a>
+						<a href="www.twitter.com/sltcieeecs" class="mx-2 orange-hover">
+						  <i class="fab fa-twitter"></i>
+						</a>
+						<a href="https://lnkd.in/gAgQFAv" class="mx-2 orange-hover">
+							<i class="fab fa-linkedin"></i>
+						</a>
+						<a href="https://lnkd.in/gaYqJ4A" class="mx-2 orange-hover">
+							<i class="fab fa-instagram"></i>
+						</a>
+						
+					</div>
+				</div>
+				
+			</section>
+		
+		</section>
 
-	<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
-	<script type="text/javascript" src="js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="js/jquery-scrolltofixed.js"></script>
-	<script type="text/javascript" src="js/jquery.nav.js"></script>
-	<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
-	<script type="text/javascript" src="js/jquery.isotope.js"></script>
-	<script src="js/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
-	<script type="text/javascript" src="js/wow.js"></script>
-	<script type="text/javascript" src="js/custom.js"></script>
+		<!-- Bootstrap core JavaScript -->
+		<script src="vendor/jquery/jquery.min.js"></script>
+		<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-</body>
+		<!-- Plugin JavaScript -->
+		<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+		<!-- Custom scripts for this template -->
+		<script src="js/grayscale.js"></script>
+
+		<!-- Custom javascript -->
+		<script src="js/custom.js"></script>
+
+		<!-- Particle library -->
+		<script src="particles/particles.js"></script>
+		<script src="particles/app.js"></script>
+
+	</body>
+
 </html>
