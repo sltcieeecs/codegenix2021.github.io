@@ -2256,9 +2256,10 @@ div.mc-image {
     -webkit-transition:padding .3s ease-out;
     transition:padding .3s ease-out;
 }
-
-.news-content .read-more:hover:after{
-    padding-left:20px;
+@media (max-width: 385px) {
+    .news-content .read-more:after{
+        display: none;
+    }
 }
 
 .news-item:hover .news-content .read-more:after{
