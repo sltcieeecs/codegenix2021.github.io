@@ -517,7 +517,7 @@ p {
 
 /* ---- Button css ---- */
 .btn-primary {
-  background-color: rgba(240, 176, 54);
+  background-color: rgb(255, 187, 0);
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   border-radius: 30px;
