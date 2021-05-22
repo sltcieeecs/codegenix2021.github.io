@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://kit.fontawesome.com/406d76c51e.js" crossorigin="anonymous"></script>
+
+  <!--========== BOX ICONS ==========-->
+  <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css" rel="stylesheet" />
+
+  <!--========== CSS ==========-->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+
+  <title>Road to CodeMania'21 Starter Pack</title>
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+</head>
+
+<body>
+  <!-- Load Facebook SDK for JavaScript -->
+  <div id="fb-root"></div>
+  <script>
+    window.fbAsyncInit = function () {
+      FB.init({
+        xfbml: true,
+        version: "v10.0",
+      });
+    };
+
+    (function (d, s, id) {
+      var js,
+        fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    })(document, "script", "facebook-jssdk");
+  </script>
+
+  <!-- Your Chat Plugin code -->
+  <div class="fb-customerchat" attribution="setup_tool" page_id="103159391612727"></div>
+  <!--========== SCROLL TOP ==========-->
+  <a href="#" class="scrolltop" id="scroll-top">
+    <i class="bx bx-chevron-up scrolltop__icon"></i>
+  </a>
+
+  <!--========== HEADER ==========-->
+  <header class="l-header" id="header">
+    <nav class="nav bd-container">
+      <a href="#" class="nav__logo">Month of CodeGeniX</a>
+
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="https://codegenix2021.github.io/" target="_blank" class="nav__link active-link">Go Back To
+              Home</a>
+          </li>
+          <li class="nav__item">
+            <a href="#contact" class="nav__link">Register Now</a>
+          </li>
+
+          <li><i class="bx bx-moon change-theme" id="theme-button"></i></li>
+        </ul>
+      </div>
+
+      <div class="nav__toggle" id="nav-toggle">
+        <i class="bx bx-menu"></i>
+      </div>
+    </nav>
+  </header>
+
+  <main class="l-main">
+    <!--========== HOME ==========-->
+    <section class="home" id="home">
+      <div class="home__container bd-container bd-grid">
+        <div class="home__data">
+          <h1 class="home__title">Road to CodeMania'21</h1>
+
+          <h2 class="home__subtitle">Skill Boost Starter Pack</h2>
+          <a href="#menu" class="button">Access Now</a>
+
+        </div>
+        <img src="assets/img/home.png" alt="" class="home__img" />
+      </div>
+      <div class="footer-social-icons">
+        <h4 class="_14">Follow us on</h4>
+        <ul class="social-icons">
+          <li>
+            <a href="https://www.facebook.com/sltcieeecs" target="_blank" class="home__social-icon">
+              <i class="fa fa-facebook"></i></a>
+          </li>
+          <li>
+            <a href="https://twitter.com/sltcieeecs" target="_blank" class="home__social-icon">
+              <i class="fa fa-twitter"></i></a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/sltcieeecs" target="_blank" class="home__social-icon"><i
+                class="fa fa-instagram"></i></a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/channel/UCrsJlEY4bydXLVdNn7SV4EA" target="_blank"
+              class="home__social-icon">
+              <i class="fa fa-youtube"></i></a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/company/sltcieeecs" target="_blank" class="home__social-icon">
+              <i class="fa fa-linkedin"></i></a>
+          </li>
+          <li>
+            <a href="https://g.page/sltcieeecs?share" target="_blank" class="home__social-icon"><i
+                class="fas fa-map-marked-alt"></i></a>
+          </li>
+        </ul>
+      </div>
+      <!--
+        <div class="video-container">
+          <iframe width="560" height="315"
+            src="https://www.youtube.com/playlist?list=PLEuhnn5mTJsGcdeIZFEXyBWV3j1cKpjgg" frameborder="0"
+            allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div> -->
+    </section>
+
+    <!--========== ABOUT ==========-->
+    <section class="about section bd-container" id="about">
+      <div class="about__container bd-grid">
+        <div class="about__data">
+          <span class="section-subtitle about__initial">About us</span>
+          <h2 class="section-title about__initial">
+            Take the first step towards a successful career by polishing your <br />
+            Python
+            Fundamentals & Algorithmic Programming skills
+          </h2>
+          <p class="about__description">
+           Road to CodeMania’21, A workshop series on “Python Fundamentals & Algorithmic Programming”. This workshop
+           series includes four informative workshops on Python programming and a project that evaluates the
+           participants on the knowledge they grasped through this workshop series. Any island-wide individual
+           enthusiastic in Python can assist and grab this valuable opportunity to enhance their programming skills.
+
+          </p>
+          <a href="#menu" class="button">Explore Python</a>
+        </div>
+
+        <img src="assets/img/about.jpeg" alt="" class="about__img" />
+      </div>
+
+    </section>
+
+    <!--========== Glass Cards ==========-->
+    <section class="card section bd-container" id="menu">
+      <div class="card__circle card__circle1"></div>
+      <div class="card__circle card__circle2"></div>
+      <span class="section-subtitle">Python Fundamentals & Algorithmic Programming</span>
+      <h1 class="section-title">Skill Boost Starter Pack</h1>
+      <div class="card__glass">
+        <h3 class="menu__name">Workshop 01 | 22nd May: </h3>
+        <!--guest sepaker name-->
+        <h3 class="menu__preci">Introduction to Python & an approach to programming in Python</h3>
+        <!--Qualifications-->
+        
+        <div class="card__data">
+          <img src="assets/img/event1.jpg" alt="" class="about__img" />
+          <!--<h3 class="menu__name">Under Construction</h3>
+              <span class="menu__detail">Under Construction</span>
+              <span class="menu__preci">Under Construction</span>-->
+        </div>
+
+        <!--<div class="card__data">
+              <h3 class="card__title">Coming Soon</h3>
+              <span class="card__profession">Coming Soon</span>
+            </div>-->
+
+        <a href="https://youtu.be/rCQZQbQj7w4 "
+          target="_blank" class="card__button">Access Now</a>
+
+        <div class="card__social">
+          <a href="https://www.instagram.com/sltcieeecs" target="_blank" class="card__link"><i
+              class="bx bxl-instagram"></i></a>
+          <a href="https://www.facebook.com/sltcieeecs" target="_blank" class="card__link"><i
+              class="bx bxl-facebook"></i></a>
+          <a href="https://www.linkedin.com/company/sltcieeecs" target="_blank" class="card__link"><i
+              class="bx bxl-linkedin"></i></a>
+        </div>
+      </div>
+      <div class="card__glass">
+        <h3 class="menu__name">Introduction to Computer Science and Programming Using Python By MiTx Edx </h3>
+        <!--guest sepaker name-->
+        <h3 class="menu__preci">An introduction to computer science as a tool to solve real-world analytical problems
+          using Python 3.5.</h3>
+        <!--Qualifications-->
+
+        <div class="card__data">
+          <img src="assets/img/event3.png" alt="" class="about__img" />
+          <!--<h3 class="menu__name">Under Construction</h3>
+              <span class="menu__detail">Under Construction</span>
+              <span class="menu__preci">Under Construction</span>-->
+        </div>
+
+        <!--<div class="card__data">
+              <h3 class="card__title">Coming Soon</h3>
+              <span class="card__profession">Coming Soon</span>
+            </div>-->
+
+        <a href="https://www.edx.org/course/introduction-to-computer-science-and-programming-7" target="_blank"
+          class="card__button">Access Now</a>
+
+        <div class="card__social">
+          <a href="https://www.instagram.com/sltcieeecs" target="_blank" class="card__link"><i
+              class="bx bxl-instagram"></i></a>
+          <a href="https://www.facebook.com/sltcieeecs" target="_blank" class="card__link"><i
+              class="bx bxl-facebook"></i></a>
+          <a href="https://www.linkedin.com/company/sltcieeecs" target="_blank" class="card__link"><i
+              class="bx bxl-linkedin"></i></a>
+        </div>
+      </div>
+      <div class="card__glass">
+        <h3 class="menu__name">2021 Complete Python Bootcamp From Zero To Hero In Python: Udemy [Free]</h3>
+        <!--guest sepaker name-->
+        <h3 class="menu__preci">The below-attached references will assist to enhance your knowledge of the basics of
+          python programming.</h3>
+        <!--Qualifications-->
+
+        <div class="card__data">
+          <img src="assets/img/event5.jpg" alt="" class="about__img" />
+          <!--<h3 class="menu__name">Under Construction</h3>
+              <span class="menu__detail">Under Construction</span>
+              <span class="menu__preci">Under Construction</span>-->
+        </div>
+
+        <!--<div class="card__data">
+              <h3 class="card__title">Coming Soon</h3>
+              <span class="card__profession">Coming Soon</span>
+            </div>-->
+
+        <a href="https://freecoursesite.com/complete-python-bootcamp-go-from-zero-to hero-in-python-8/ " target="_blank"
+          class="card__button">Access Now</a>
+
+        <div class="card__social">
+          <a href="https://www.instagram.com/sltcieeecs" target="_blank" class="card__link"><i
+              class="bx bxl-instagram"></i></a>
+          <a href="https://www.facebook.com/sltcieeecs" target="_blank" class="card__link"><i
+              class="bx bxl-facebook"></i></a>
+          <a href="https://www.linkedin.com/company/sltcieeecs" target="_blank" class="card__link"><i
+              class="bx bxl-linkedin"></i></a>
+        </div>
+      </div>
+
+      <div class="card__glass">
+        <h3 class="menu__name">Python tutorial | w3schools: </h3>
+        <!--guest sepaker name-->
+        <h3 class="menu__preci">The below-attached references will assist to enhance your knowledge of the basics of
+          python programming.</h3>
+        <!--Qualifications-->
+
+        <div class="card__data">
+          <img src="assets/img/event6.jpg" alt="" class="about__img" />
+          <!--<h3 class="menu__name">Under Construction</h3>
+              <span class="menu__detail">Under Construction</span>
+              <span class="menu__preci">Under Construction</span>-->
+        </div>
+
+        <!--<div class="card__data">
+              <h3 class="card__title">Coming Soon</h3>
+              <span class="card__profession">Coming Soon</span>
+            </div>-->
+
+        <a href="https://www.w3schools.com/python/ " target="_blank"
+          class="card__button">Access Now</a>
+
+        <div class="card__social">
+          <a href="https://www.instagram.com/sltcieeecs" target="_blank" class="card__link"><i
+              class="bx bxl-instagram"></i></a>
+          <a href="https://www.facebook.com/sltcieeecs" target="_blank" class="card__link"><i
+              class="bx bxl-facebook"></i></a>
+          <a href="https://www.linkedin.com/company/sltcieeecs" target="_blank" class="card__link"><i
+              class="bx bxl-linkedin"></i></a>
+        </div>
+      </div>
+
+
+
+      <div class="card__glass">
+        <h3 class="menu__name">∙ Python 3.9 documentation: </h3>
+        <!--guest sepaker name-->
+        <h3 class="menu__preci">The below-attached references will assist to enhance your knowledge of the basics of
+          python programming. </h3>
+        <!--Qualifications-->
+
+        <div class="card__data">
+          <img src="assets/img/event2.jpg" alt="" class="about__img" />
+          <!--<h3 class="menu__name">Under Construction</h3>
+              <span class="menu__detail">Under Construction</span>
+              <span class="menu__preci">Under Construction</span>-->
+        </div>
+
+        <!--<div class="card__data">
+              <h3 class="card__title">Coming Soon</h3>
+              <span class="card__profession">Coming Soon</span>
+            </div>-->
+
+        <a href="https://drive.google.com/file/d/1MyaNGzQKXfpaiFHHZF2oWG6M4F0soE2r/view" target="_blank"
+          class="card__button">Access Now</a>
+
+        <div class="card__social">
+          <a href="https://www.instagram.com/sltcieeecs" target="_blank" class="card__link"><i
+              class="bx bxl-instagram"></i></a>
+          <a href="https://www.facebook.com/sltcieeecs" target="_blank" class="card__link"><i
+              class="bx bxl-facebook"></i></a>
+          <a href="https://www.linkedin.com/company/sltcieeecs" target="_blank" class="card__link"><i
+              class="bx bxl-linkedin"></i></a>
+        </div>
+      </div>
+      
+
+
+
+
+
+      <!--
+        <div class="card__glass">
+        <h3 class="menu__name">Road to Codemania 2021</h3>
+        <!--guest sepaker name-->
+        <!-- <h3 class="menu__preci">CODEGENIX Month</h3>
+        <!--Qualifications-->
+        <!--<h3 class="menu__detail">
+          Introducing Road to Codemania, the virtual workshop series organized
+          by the IEEE Computer Society Student Branch Chapter of SLTC. Along
+          with series of workshops, you will get the awareness and basics of
+          competitive programming skills. One of the elite personalties of Sri
+          Lnaka will lead us for better coding. Grab your chance to build the
+          first block of coding. Stay tuned...
+        </h3>
+        <div class="card__data">
+          <img src="assets/img/event1.png" alt="" class="about__img" />
+          <!--<h3 class="menu__name">Under Construction</h3>
+              <span class="menu__detail">Under Construction</span>
+              <span class="menu__preci">Under Construction</span>-->
+        <!--</div>
+
+        <!--<div class="card__data">
+              <h3 class="card__title">Coming Soon</h3>
+              <span class="card__profession">Coming Soon</span>
+            </div>-->
+
+        <!--<a href="https://ieee.sltc.ac.lk/" class="card__button">Coming Soon</a>
+
+        <div class="card__social">
+          <a href="https://www.instagram.com/sltcieeecs" class="card__link"><i class="bx bxl-instagram"></i></a>
+          <a href="https://www.facebook.com/sltcieeecs" class="card__link"><i class="bx bxl-facebook"></i></a>
+          <a href="https://www.linkedin.com/company/sltcieeecs" class="card__link"><i class="bx bxl-linkedin"></i></a>
+        </div>
+      </div>-->
+    </section>
+
+    <!--
+    <section class="app section bd-container">
+      <div class="app__container bd-grid">
+        <div class="app__data">
+          <span class="section-subtitle app__initial">Get Instant Updates</span>
+          <h2 class="section-title app__initial">SLTC IEEE to your Mobile</h2>
+          <p class="app__description">Stay Tuned</p>
+          <div class="app__stores">
+            <a href="https://ieee.sltc.ac.lk/"><img src="assets/img/app1.png" alt="" class="app__store" /></a>
+            <a href="https://ieee.sltc.ac.lk/"><img src="assets/img/app2.png" alt="" class="app__store" /></a>
+          </div>
+        </div>
+
+        <img src="assets/img/movil-app.png" alt="" class="app__img" />
+      </div>
+    </section>-->
+
+    <!--========== CONTACT US ==========-->
+    <section class="contact section bd-container" id="contact">
+      <div class="contact__container bd-grid">
+        <div class="contact__data">
+          <span class="section-subtitle contact__initial">Wanna Know More</span>
+          <h2 class="section-title contact__initial">Contact us</h2>
+          <p class="contact__description">
+            Visit the official Web page of IEEE Student Branch of Sri Lanka
+            Technological Campus for more updates
+          </p>
+        </div>
+
+        <div class="contact__button">
+          <a href="https://ieee.sltc.ac.lk/" class="button">Visit SLTC IEEE Official Website</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!--========== FOOTER ==========-->
+  <footer class="footer section bd-container">
+    <div class="footer__container bd-grid">
+      <div class="footer__content">
+        <a href="#" class="footer__logo">Stay Connected</a>
+        <span class="footer__description">Our Social Media Platforms</span>
+        <div>
+          <a href="https://www.youtube.com/channel/UCrsJlEY4bydXLVdNn7SV4EA" target="_blank"
+            class="home__social-icon"><i class="bx bxl-youtube"></i></a>
+          <a href="https://www.linkedin.com/company/sltcieeecs" target="_blank" class="home__social-icon"><i
+              class="bx bxl-linkedin"></i></a>
+          <a href="https://www.facebook.com/sltcieeecs" target="_blank" class="home__social-icon"><i
+              class="bx bxl-facebook"></i></a>
+          <a href="https://sltcieeecs.business.site/" target="_blank" class="home__social-icon"><i
+              class="bx bxl-google"></i></a>
+          <a href="https://www.instagram.com/sltcieeecs" target="_blank" class="home__social-icon"><i
+              class="bx bxl-instagram"></i></a>
+          <a href="https://twitter.com/sltcieeecs" target="_blank" class="home__social-icon"><i
+              class="bx bxl-twitter"></i></a>
+        </div>
+      </div>
+
+      <div class="footer__content">
+        <h3 class="footer__title">IEEE Student Branch of SLTC</h3>
+        <ul>
+          <li>
+            <a href="https://ieee.sltc.ac.lk/" class="footer__link">IEEE IES Student Chapter</a>
+          </li>
+          <li>
+            <a href="https://ieee.sltc.ac.lk/" class="footer__link">IEEE WIE Affinity Group</a>
+          </li>
+          <li>
+            <a href="https://ieee.sltc.ac.lk/" class="footer__link">IEEE CS Student Chapter</a>
+          </li>
+          <li>
+            <a href="https://ieee.sltc.ac.lk/" class="footer__link">IEEE IAS Student Chapter</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer__content">
+        <h3 class="footer__title">Information</h3>
+        <ul>
+          <li><a href="#menu" class="footer__link">Event</a></li>
+          <li><a href="#contact" class="footer__link">Contact us</a></li>
+          <li>
+            <a href="https://www.computer.org/" target="_blank" class="footer__link">Privacy policy</a>
+          </li>
+          <li>
+            <a href="https://www.computer.org/" target="_blank" class="footer__link">Terms of services</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer__content">
+        <h3 class="footer__title">Address</h3>
+        <ul>
+          <a href="https://g.page/sltcieeecs?share" target="_blank" class="home__social-icon"><i
+              class="fas fa-map-marked-alt"></i></a>
+          <li>IEEE Computer Society Student Branch Chapter of SLTC</li>
+          <li>Ingiriya Road, Meepe, Padukka, Colombo</li>
+          <li>Sri Lanka</li>
+          <li>sltcieeecs@gmail.com</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="footer__copy">&#169; 2020 IEEE Computer Society of SLTC. All right reserved</p>
+  </footer>
+
+  <!--========== SCROLL REVEAL ==========-->
+  <script src="https://unpkg.com/scrollreveal"></script>
+
+  <!--========== MAIN JS ==========-->
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
